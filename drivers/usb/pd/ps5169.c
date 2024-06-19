@@ -98,7 +98,7 @@ static bool ps5169_present_check(struct ps5169_info *info)
 static int ps5169_get_chipid_revision(struct ps5169_info *info)
 {
 	u8 chip_id_l, chip_id_h;
-	u8 revision_l, revision_h;
+	u8 revision_l, revision_h = 0;
 	int ret = 0;
 
 	ret |= ps5169_read_reg(info, REG_CHIP_ID_L, &chip_id_l);
